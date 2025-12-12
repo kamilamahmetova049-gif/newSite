@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camelia — Корзина</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/app.js" defer></script>
+    <script src="/js/cart.js" defer></script>
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav">
+            <div class="logo">Camelia</div>
+            <div class="nav-links">
+                <a href="/">Главная</a>
+                <a href="/collections">Коллекции</a>
+                <a href="/categories">Категории</a>
+                <a href="/accessories">Аксессуары</a>
+                <a href="/shop">Каталог</a>
+                <a href="/contacts">Контакты</a>
+            </div>
+            <a class="nav-btn" href="/cart" id="cart-link">Корзина (<span id="cart-count">0</span>)</a>
+        </nav>
+        <div class="hero-content">
+            <p class="eyebrow">Camelia Cart</p>
+            <h1>Ваша корзина</h1>
+            <p class="hero-text">Проверьте выбранные товары перед оформлением заказа.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div th:if="${items != null and !items.isEmpty()}" class="cart-container">
+            <div class="cart-items">
+                <div th:each="item : ${items}" class="cart-item" th:data-item-id="${item.id}">
+                    <img th:src="${item.product.imageUrl}" th:alt="${item.product.name}" class="cart-item-image">
+                    <div class="cart-item-details">
+                        <h3 th:text="${item.product.name}"></h3>
+                        <p th:text="${item.product.description}"></p>
+                        <div class="cart-item-controls">
+                            <button class="quantity-btn" onclick="updateQuantity(this, -1)">−</button>
+                            <span class="quantity" th:text="${item.quantity}"></span>
+                            <button class="quantity-btn" onclick="updateQuantity(this, 1)">+</button>
+                            <span class="item-price" th:text="${#numbers.formatDecimal(item.totalPrice, 0, 'COMMA', 0, 'POINT')} + ' ₸'"></span>
+                        </div>
+                    </div>
+                    <button class="remove-btn" onclick="removeItem(this)" th:data-item-id="${item.id}">×</button>
+                </div>
+            </div>
+            
+            <div class="cart-summary">
+                <h2>Итого</h2>
+                <div class="summary-row">
+                    <span>Товаров:</span>
+                    <span id="total-items" th:text="${#lists.size(items)}"></span>
+                </div>
+                <div class="summary-row total">
+                    <span>Сумма:</span>
+                    <span id="cart-total" th:text="${#numbers.formatDecimal(total, 0, 'COMMA', 0, 'POINT')} + ' ₸'"></span>
+                </div>
+                <a href="/order/checkout" class="primary checkout-btn">Оформить заказ</a>
+                <a href="/shop" class="ghost">Продолжить покупки</a>
+            </div>
+        </div>
+        
+        <div th:if="${items == null or items.isEmpty()}" class="empty-cart">
+            <h2>Корзина пуста</h2>
+            <p>Добавьте товары из каталога, чтобы оформить заказ.</p>
+            <a href="/shop" class="primary">Перейти в каталог</a>
+        </div>
+    </section>
+</body>
+</html>
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camelia — Контакты</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/app.js" defer></script>
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav">
+            <div class="logo">Camelia</div>
+            <div class="nav-links">
+                <a href="/">Главная</a>
+                <a href="/collections">Коллекции</a>
+                <a href="/categories">Категории</a>
+                <a href="/accessories">Аксессуары</a>
+                <a href="/lookbook">Лукбук</a>
+                <a href="/contacts">Контакты</a>
+            </div>
+            <a class="nav-btn" href="/shop">Каталог</a>
+        </nav>
+        <div class="hero-content">
+            <p class="eyebrow">Camelia Studio</p>
+            <h1>Бутики и онлайн-команда в Казахстане</h1>
+            <p class="hero-text">Запишитесь на примерку в Алматы или Астане, либо напишите стилисту — соберём образ дистанционно.</p>
+            <div class="hero-actions">
+                <a class="primary" href="tel:+77273564510">Позвонить</a>
+                <a class="ghost" href="mailto:hello@camelia.kz">Написать</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="section-heading">
+            <p class="eyebrow">Контакты</p>
+            <h2>Как с нами связаться</h2>
+        </div>
+        <div class="contact-grid">
+            <article class="contact-card">
+                <h3>Бутики</h3>
+                <p>Алматы, пр. Аль-Фараби 77/8 (Esentai Square)<br>Астана, пр. Туран 37, Talan Towers</p>
+                <span>Ежедневно 11:00—21:00</span>
+            </article>
+            <article class="contact-card">
+                <h3>Онлайн-команда</h3>
+                <p>WhatsApp / Telegram<br>+7 707 123-45-67</p>
+                <span>Ежедневно 10:00—22:00 (GMT+5)</span>
+            </article>
+            <article class="contact-card">
+                <h3>Почта</h3>
+                <p>hello@camelia.kz</p>
+                <span>Ответ в течение рабочего дня</span>
+            </article>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <p class="eyebrow">Форма</p>
+            <h2>Запишитесь на примерку</h2>
+        </div>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Имя</label>
+                <input id="name" type="text" placeholder="Например, Анна" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input id="phone" type="tel" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            <div class="form-group">
+                <label for="city">Город</label>
+                <input id="city" type="text" placeholder="Алматы / Астана / Шымкент" required>
+            </div>
+            <div class="form-group full">
+                <label for="message">Комментарий</label>
+                <textarea id="message" rows="4" placeholder="Желаемая дата, категория, размер"></textarea>
+            </div>
+            <button type="submit" class="primary">Отправить заявку</button>
+        </form>
+    </section>
+</body>
+</html>
+

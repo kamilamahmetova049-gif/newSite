@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camelia — Заказ оформлен</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/app.js" defer></script>
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav">
+            <div class="logo">Camelia</div>
+            <div class="nav-links">
+                <a href="/">Главная</a>
+                <a href="/shop">Каталог</a>
+            </div>
+            <a class="nav-btn" href="/shop">Каталог</a>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="success-container">
+            <div class="success-icon">✓</div>
+            <h1>Заказ успешно оформлен!</h1>
+            <p class="success-message">
+                Спасибо за ваш заказ! Номер заказа: <strong th:text="${order.id}"></strong>
+            </p>
+            <div class="order-details">
+                <h3>Детали заказа</h3>
+                <p><strong>Имя:</strong> <span th:text="${order.customerName}"></span></p>
+                <p><strong>Email:</strong> <span th:text="${order.customerEmail}"></span></p>
+                <p><strong>Телефон:</strong> <span th:text="${order.customerPhone}"></span></p>
+                <p><strong>Адрес:</strong> <span th:text="${order.city} + ', ' + ${order.address}"></span></p>
+                <p><strong>Способ оплаты:</strong> <span th:text="${order.paymentMethod}"></span></p>
+                <p><strong>Сумма:</strong> <span th:text="${#numbers.formatDecimal(order.totalAmount, 0, 'COMMA', 0, 'POINT')} + ' ₸'"></span></p>
+            </div>
+            <div class="success-actions">
+                <a href="/shop" class="primary">Продолжить покупки</a>
+                <a href="/" class="ghost">На главную</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+

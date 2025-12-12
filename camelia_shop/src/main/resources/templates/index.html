@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camelia — женская одежда и аксессуары</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/app.js" defer></script>
+    <script src="/js/cart.js" defer></script>
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav">
+            <div class="logo">Camelia</div>
+            <div class="nav-links">
+                <a href="/collections">Коллекции</a>
+                <a href="/categories">Категории</a>
+                <a href="/accessories">Аксессуары</a>
+                <a href="/lookbook">Лукбук</a>
+                <a href="/contacts">Контакты</a>
+            </div>
+            <a class="nav-btn" href="/cart" id="cart-link">Корзина (<span id="cart-count">0</span>)</a>
+        </nav>
+        <div class="hero-content">
+            <p class="eyebrow">Осень · Зима 2025</p>
+            <h1>Современная классика в каждой детали</h1>
+            <p class="hero-text">
+                Лёгкие пальто, кашемировые костюмы и изящные аксессуары,
+                созданные подчеркнуть индивидуальность и комфорт.
+            </p>
+            <div class="hero-actions">
+                <a class="primary" href="/collections">Смотреть коллекцию</a>
+                <a class="ghost" href="/contacts">Найти бутик</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="categories" class="section categories">
+        <div class="section-heading">
+            <p class="eyebrow">Только женские вещи</p>
+            <h2>Выберите, что ищете</h2>
+        </div>
+        <div class="category-grid">
+            <article class="category-card">
+                <h3>Платья</h3>
+                <p>Шёлковые комбинезоны, миди с разрезом, платья‑рубашки.</p>
+            </article>
+            <article class="category-card">
+                <h3>Пальто и тренчи</h3>
+                <p>Двубортные, оверсайз или мягкие пальто-халаты.</p>
+            </article>
+            <article class="category-card">
+                <h3>Костюмы</h3>
+                <p>Брючные двойки, жилеты и юбки-карандаши.</p>
+            </article>
+            <article class="category-card">
+                <h3>Трикотаж</h3>
+                <p>Джемперы, кардиганы и базовые топы из кашемира.</p>
+            </article>
+            <article class="category-card">
+                <h3>Деним</h3>
+                <p>Прямые джинсы, юбки-миди и total look total white.</p>
+            </article>
+            <article class="category-card">
+                <h3>Обувь</h3>
+                <p>Сапоги-чулки, балетки с лентой, минималистичные мюли.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="collections" class="section collections">
+        <div class="section-heading">
+            <p class="eyebrow">Новые поступления</p>
+            <h2>Коллекции недели</h2>
+        </div>
+        <div class="card-grid">
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80" alt="Новый трикотаж" loading="lazy">
+                <div class="card-body">
+                    <h3>Тёплый трикотаж</h3>
+                    <p>Мягкие кардиганы из альпаки и шерсти мериноса.</p>
+                    <span class="pill">от 39 000 ₸</span>
+                </div>
+            </article>
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80" alt="Современные костюмы" loading="lazy">
+                <div class="card-body">
+                    <h3>Городские костюмы</h3>
+                    <p>Структурированные жакеты и широкие брюки.</p>
+                    <span class="pill">от 60 000 ₸</span>
+                </div>
+            </article>
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80" alt="Кашемировое пальто" loading="lazy">
+                <div class="card-body">
+                    <h3>Пальто Camelia</h3>
+                    <p>Чёткие линии, глубокие оттенки и идеальная посадка.</p>
+                    <span class="pill">от 78 000 ₸</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="accessories" class="section accessories">
+        <div class="section-heading">
+            <p class="eyebrow">Тонкие акценты</p>
+            <h2>Аксессуары ручной работы</h2>
+        </div>
+        <div class="accessories-grid">
+            <div class="accessory">
+                <h3>Сумки</h3>
+                <p>Мягкая итальянская кожа, лаконичная фурнитура и глубокие оттенки карамели, графита и сливочного крема.</p>
+            </div>
+            <div class="accessory highlight">
+                <h3>Ювелирные акценты</h3>
+                <p>Минималистичные кольца и браслеты из серебра 925 пробы c матовым покрытием.</p>
+            </div>
+            <div class="accessory">
+                <h3>Шарфы и платки</h3>
+                <p>Шёлковые принты в духе современного ар-нуво и согревающие кашемировые палантины.</p>
+            </div>
+            <div class="accessory">
+                <h3>Пояса</h3>
+                <p>Плетёные кожаные ремни и лаконичные корсеты для платья.</p>
+            </div>
+            <div class="accessory">
+                <h3>Очки</h3>
+                <p>Оверсайз оправы с тонированными линзами и тонкие cat-eye.</p>
+            </div>
+            <div class="accessory">
+                <h3>Головные уборы</h3>
+                <p>Вязаные шапки-бини, кашемировые береты и капоры.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section shop-grid" id="shop">
+        <div class="section-heading">
+            <p class="eyebrow">Каталог</p>
+            <h2>Больше вариантов выбора</h2>
+            <div class="chips">
+                <button class="chip active" type="button" data-filter="all" aria-pressed="true">Все</button>
+                <button class="chip" type="button" data-filter="outerwear" aria-pressed="false">Верхняя одежда</button>
+                <button class="chip" type="button" data-filter="dresses" aria-pressed="false">Платья</button>
+                <button class="chip" type="button" data-filter="accessories" aria-pressed="false">Аксессуары</button>
+                <button class="chip" type="button" data-filter="shoes" aria-pressed="false">Обувь</button>
+            </div>
+        </div>
+        <div class="product-grid">
+            <article th:each="product : ${products}" class="product-card" th:data-category="${product.category}">
+                <img th:src="${product.imageUrl}" th:alt="${product.name}">
+                <div class="product-body">
+                    <h3 th:text="${product.name}"></h3>
+                    <p th:text="${product.description}"></p>
+                    <div class="product-footer">
+                        <span th:text="${#numbers.formatDecimal(product.price, 0, 'COMMA', 0, 'POINT')} + ' ₸'"></span>
+                        <button class="add-to-cart" th:data-product-id="${product.id}">В корзину</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="section variants" id="variants">
+        <div class="section-heading">
+            <p class="eyebrow">Варианты комплектов</p>
+            <h2>Соберите образ онлайн</h2>
+        </div>
+        <div class="variant-grid">
+            <article class="variant-card">
+                <header>
+                    <h3>Soft Office</h3>
+                    <span>Пальто + костюм</span>
+                </header>
+                <div class="variant-options">
+                    <button type="button" data-action="variant" data-target="/lookbook#office">Посмотреть</button>
+                    <a href="/shop" class="link">В каталог</a>
+                </div>
+                <ul>
+                    <li>Шерстяное пальто дымчатого цвета</li>
+                    <li>Топ из смеси шёлка</li>
+                    <li>Жилет + брюки в тон</li>
+                </ul>
+            </article>
+            <article class="variant-card">
+                <header>
+                    <h3>Weekend Walk</h3>
+                    <span>Трикотаж + деним</span>
+                </header>
+                <div class="variant-options">
+                    <button type="button" data-action="variant" data-target="/lookbook#weekend">Посмотреть</button>
+                    <a href="/collections" class="link">Коллекции</a>
+                </div>
+                <ul>
+                    <li>Кардиган на запах</li>
+                    <li>Прямые джинсы молочного цвета</li>
+                    <li>Сумка-сэтчел и бейсболка</li>
+                </ul>
+            </article>
+            <article class="variant-card">
+                <header>
+                    <h3>Evening Glow</h3>
+                    <span>Платье + аксессуары</span>
+                </header>
+                <div class="variant-options">
+                    <button type="button" data-action="variant" data-target="/lookbook#evening">Посмотреть</button>
+                    <a href="/accessories" class="link">Украшения</a>
+                </div>
+                <ul>
+                    <li>Атласное платье-комбинация</li>
+                    <li>Барочный браслет-манжет</li>
+                    <li>Мини-клатч из велюра</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section id="looks" class="section looks">
+        <div class="look-card">
+            <p class="eyebrow">Стиль дня</p>
+            <h2>Capsule Look</h2>
+            <p>Костюм‑двойка цвета мокко, мягкая водолазка и молочная сумка‑хобо. Добавьте золотую цепочку и мягкие сапоги‑чулки для акцента.</p>
+            <a class="primary light" href="/lookbook#capsule">Смотреть лукбук</a>
+        </div>
+        <div class="look-variations">
+            <article>
+                <h3>Weekend</h3>
+                <p>Трикотажный сет + деним, дополненные мягкой поясной сумкой.</p>
+            </article>
+            <article>
+                <h3>Office</h3>
+                <p>Укороченный жакет, прямые брюки, кожаная папка и ожерелье‑цепь.</p>
+            </article>
+            <article>
+                <h3>Evening</h3>
+                <p>Платье-комбинация, бархатный кейп и тонкие серьги-кольца.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section style-lab">
+        <div class="section-heading">
+            <p class="eyebrow">Style Lab</p>
+            <h2>Подбор по случаям</h2>
+        </div>
+        <div class="lab-grid">
+            <article>
+                <h3>Свидание</h3>
+                <p>А-силуэтное платье, жакет без воротника, clutch envelope и бархатные лодочки.</p>
+            </article>
+            <article>
+                <h3>Путешествие</h3>
+                <p>Капсульные джоггеры, стилизованная ветровка, поясная сумка и лоферы.</p>
+            </article>
+            <article>
+                <h3>Вечеринка</h3>
+                <p>Комбинезон на одно плечо, браслеты-манжеты и блестящие мюли.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section testimonials">
+        <div class="section-heading">
+            <p class="eyebrow">Отзывы</p>
+            <h2>Нас выбирают за качество</h2>
+        </div>
+        <div class="testimonial-grid">
+            <article>
+                <p>«Пальто идеальной длины, из плотной шерсти — пережило уже три сезона». </p>
+                <span>— Алина</span>
+            </article>
+            <article>
+                <p>«Нашла здесь аксессуары, которые дополняют любой образ, от офиса до вечера».</p>
+                <span>— Оксана</span>
+            </article>
+            <article>
+                <p>«Консультанты помогли собрать капсульный гардероб. Теперь одеваться по утрам — удовольствие».</p>
+                <span>— Мария</span>
+            </article>
+        </div>
+    </section>
+
+    <section id="contacts" class="section cta">
+        <div class="cta-card">
+            <h2>Подпишитесь на Camelia Journal</h2>
+            <p>Новые дропы, закрытые распродажи и гиды по стилю раз в две недели.</p>
+            <form class="cta-form">
+                <input type="email" placeholder="Введите e-mail" required>
+                <button type="submit" class="primary">Подписаться</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <div class="logo small">Camelia</div>
+                <p>Лёгкость, тактильность и выверенный стиль.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Бутики</a>
+                <a href="#">Доставка</a>
+                <a href="#">Возврат</a>
+                <a href="#">Care Guide</a>
+            </div>
+            <div class="footer-social">
+                <span>Instagram</span>
+                <span>Pinterest</span>
+                <span>Telegram</span>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 Camelia Atelier</p>
+    </footer>
+
+</body>
+</html>
+

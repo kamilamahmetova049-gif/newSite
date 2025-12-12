@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camelia — Каталог</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/app.js" defer></script>
+    <script src="/js/cart.js" defer></script>
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav">
+            <div class="logo">Camelia</div>
+            <div class="nav-links">
+                <a href="/">Главная</a>
+                <a href="/collections">Коллекции</a>
+                <a href="/categories">Категории</a>
+                <a href="/accessories">Аксессуары</a>
+                <a href="/lookbook">Лукбук</a>
+                <a href="/contacts">Контакты</a>
+            </div>
+            <a class="nav-btn" href="/cart" id="cart-link">Корзина (<span id="cart-count">0</span>)</a>
+        </nav>
+        <div class="hero-content">
+            <p class="eyebrow">Camelia Shop</p>
+            <h1>Каталог женской одежды из Казахстана</h1>
+            <p class="hero-text">Алматинская студия сшивает капсулы малыми тиражами. Фильтруйте по категории и собирайте образ онлайн.</p>
+            <div class="hero-actions">
+                <a class="primary" href="/collections">Смотреть коллекции</a>
+                <a class="ghost" href="/contacts">Подбор стилиста</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section shop-grid">
+        <div class="section-heading">
+            <p class="eyebrow">Каталог</p>
+            <h2>Выберите категорию</h2>
+            <div class="chips">
+                <button class="chip active" type="button" data-filter="all" aria-pressed="true">Все</button>
+                <button class="chip" type="button" data-filter="outerwear" aria-pressed="false">Верхняя одежда</button>
+                <button class="chip" type="button" data-filter="dresses" aria-pressed="false">Платья</button>
+                <button class="chip" type="button" data-filter="knit" aria-pressed="false">Трикотаж</button>
+                <button class="chip" type="button" data-filter="accessories" aria-pressed="false">Аксессуары</button>
+                <button class="chip" type="button" data-filter="shoes" aria-pressed="false">Обувь</button>
+            </div>
+        </div>
+        <div class="product-grid">
+            <article th:each="product : ${products}" class="product-card" th:data-category="${product.category}">
+                <img th:src="${product.imageUrl}" th:alt="${product.name}">
+                <div class="product-body">
+                    <h3 th:text="${product.name}"></h3>
+                    <p th:text="${product.description}"></p>
+                    <div class="product-footer">
+                        <span th:text="${#numbers.formatDecimal(product.price, 0, 'COMMA', 0, 'POINT')} + ' ₸'"></span>
+                        <button class="add-to-cart" th:data-product-id="${product.id}">В корзину</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+</html>
+
